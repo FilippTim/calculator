@@ -66,7 +66,9 @@ function solveEquation($equation) {
 
 // Пример использования
 include"form.php";
-$equation = $_POST["equation"];
+if(isset($_POST['equation'])){
+    $equation = $_POST["equation"];
 echo $equation."<br>";
 echo solveEquation($equation)[0];
+}
 ?>
